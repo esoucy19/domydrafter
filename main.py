@@ -5,6 +5,7 @@ import yaml
 from yaml import Loader
 
 import domydrafter.pick
+from domydrafter.pick import Pick, Pool, BoosterBox
 
 def init():
     data_files = os.listdir('./data')
@@ -21,6 +22,7 @@ def init():
 
 if __name__ == "__main__":
     init()
+    print(Pick.picks)
     if len(sys.argv) != 1:
         box = sys.argv[1]
         num_boosters = int(sys.argv[2])

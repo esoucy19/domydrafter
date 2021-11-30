@@ -28,9 +28,13 @@
   name: mages
   picks:
     - u5
+- !Pool
+  name: all commanders
+  merge:
+    - commanders
+    - mages
 - !BoosterBox
   name: box
   pools:
     - units: 2
-    - commanders: 1
-    - mages: 1
+    - all commanders: 2
