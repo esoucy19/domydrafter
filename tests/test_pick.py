@@ -56,9 +56,33 @@ obj4 = yaml.load(
 name: pool1
 picks:
 - u1001
-- u1002] }
+- u1002
 """, Loader)
-print(obj4)
-print(Pick.picks)
-print(Pool.pools)
+
+obj5 = yaml.load(
+"""
+- !Pick
+    id: u1100
+    name: commander
+- !Pick
+    id: u1200
+    name: mounted commander
+- !Pool
+    name: commanders
+    picks:
+    - u1100
+    - u1200
+""", Loader)
+
+obj6 = yaml.load(
+"""
+--- !BoosterBox
+name: indies
+pools:
+- pool1: 2
+- commanders: 2
+""", Loader)
+print(obj6)
+booster1 = obj6.new_booster()
+print(booster1)
 raise()

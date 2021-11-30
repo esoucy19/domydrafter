@@ -1,0 +1,36 @@
+---
+- !Pick
+  id: u1
+  name: militia
+- !Pick
+  id: u2
+  name: heavy infantry
+- !Pick
+  id: u3
+  name: commander
+- !Pick
+  id: u4
+  name: mounted commander
+- !Pick
+  id: u5
+  name: wizard
+- !Pool
+  name: units
+  picks:
+    - u1
+    - u2
+- !Pool
+  name: commanders
+  picks:
+    - u3
+    - u4
+- !Pool
+  name: mages
+  picks:
+    - u5
+- !BoosterBox
+  name: box
+  pools:
+    - units: 2
+    - commanders: 1
+    - mages: 1
