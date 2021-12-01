@@ -56,7 +56,7 @@ game is to prefix them with a letter. We used the following prefixes as
 convention when populating the data:
 
 | Prefix | Pick type |
-|--- | --- | --- |
+|--- | --- |
 | u | unit |
 | n | nation |
 | i | item |
