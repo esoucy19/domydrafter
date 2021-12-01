@@ -14,7 +14,7 @@ class Pick:
     attr: Dict[str, Any] = field(default_factory=dict)
     tags: Set[str] = field(default_factory=set)
 
-    picks: ClassVar[Dict[int, Any]] = {}
+    picks: ClassVar[Dict[str, Any]] = {}
 
     def __post_init__(self):
         if self.id in Pick.picks:
@@ -60,20 +60,29 @@ yaml.add_representer(Pick, pick_representer)
 @dataclass
 class Pool():
     name: str
-    picks: List[Pick] = field(default_factory=list)
+    picks: List[str] = field(default_factory=list)
     merge: List[str] = field(default_factory=list)
+    remove: List[str] = field(default_factory=list)
+    _picks: Dict[str, Pick] = field(default_factory=dict, repr=False)
 
     pools: ClassVar[Dict[str, Any]] = {}
 
     def __post_init__(self):
         for i, pick in enumerate(self.picks):
             if type(pick) == str or type(pick) == int:
-                self.picks[i] = Pick.picks[str(pick)]
+                self._picks[str(pick)] = Pick.picks[str(pick)]
             elif type(pick) == dict:
-                self.picks[i] = Pick(**pick)
+                self.picks[i] = pick['id']
+                self._picks[pick['id']] = Pick(**pick)
+            elif type(pick) == Pick:
+                self.picks[i] = pick.id
+                self._picks[pick.id] = pick
         for pool in self.merge:
             if pool in Pool.pools:
-                self.picks += Pool.pools[pool].picks
+                self._picks.update(Pool.pools[pool]._picks)
+        for pick in self.remove:
+            if pick in self._picks:
+                del(self._picks[pick])
         Pool.pools[self.name] = self
 
 
@@ -86,7 +95,9 @@ yaml.add_constructor('!Pool', pool_constructor)
 
 
 def pool_representer(dumper, data):
-    return dumper.represent_mapping('!Pool', asdict(data))
+    ddict = asdict(data)
+    ddict.pop('_picks')
+    return dumper.represent_mapping('!Pool', ddict)
 
 
 yaml.add_representer(Pool, pool_representer)
@@ -107,23 +118,22 @@ class BoosterBox:
                     num_picks = pool[key]
                     self.pools[i] = (Pool.pools[name], num_picks)
             if type(pool) == list:
-                print(pool)
                 name = pool[0]
                 num_picks = pool[1]
                 self.pools[i] = (Pool.pools[name], num_picks)
             BoosterBox.boxes[self.name] = self
 
     def new_booster(self):
-        booster = set()
+        booster = []
         for pool in self.pools:
-            picks = pool[0].picks
+            pool_draws = set()
+            picks = list(pool[0]._picks.values())
             num_picks = pool[1]
-            new_size = len(booster) + num_picks
-            while len(booster) != new_size:
-                booster.add(picks[random.randrange(len(picks))].id)
-        booster = list(booster)
-        for i, id in enumerate(booster):
-            booster[i] = Pick.picks[id]
+            new_size = len(pool_draws) + num_picks
+            while len(pool_draws) != new_size:
+                pool_draws.add(picks[random.randrange(len(picks))].id)
+            pool_picks = [Pick.picks[id] for id in pool_draws]
+            booster += pool_picks
         return booster
 
 

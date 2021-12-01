@@ -1,40 +1,8 @@
----
-- !Pick
-  id: u1
-  name: militia
-- !Pick
-  id: u2
-  name: heavy infantry
-- !Pick
-  id: u3
-  name: commander
-- !Pick
-  id: u4
-  name: mounted commander
-- !Pick
-  id: u5
-  name: wizard
-- !Pool
-  name: units
-  picks:
-    - u1
-    - u2
-- !Pool
-  name: commanders
-  picks:
-    - u3
-    - u4
-- !Pool
-  name: mages
-  picks:
-    - u5
-- !Pool
-  name: all commanders
-  merge:
-    - commanders
-    - mages
-- !BoosterBox
-  name: box
-  pools:
-    - units: 2
-    - all commanders: 2
+# Test we can delete a key from a pool
+--- !Pool
+name: ea_arco_no_sceptic
+merge:
+  - early_arcoscephale_leaders
+picks: []
+remove:
+  - u1071

@@ -1,0 +1,864 @@
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '75'
+    - '74'
+    - '73'
+  id: n5
+  name: early_arcoscephale
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '77'
+  id: n6
+  name: early_ermor
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '82'
+    - '83'
+  id: n7
+  name: early_ulm
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '91'
+  id: n8
+  name: early_marverni
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '84'
+    - '85'
+    - '125'
+    - '4'
+  id: n9
+  name: early_sauromatia
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '53'
+    - '54'
+  id: n10
+  name: early_tienchi
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '153'
+    - '154'
+  id: n11
+  name: early_machaka
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '30'
+    - '31'
+    - '32'
+    - '33'
+  id: n12
+  name: early_mictlan
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '119'
+    - '120'
+  id: n13
+  name: early_abysia
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '94'
+    - '168'
+    - '169'
+  id: n14
+  name: early_caelum
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '9'
+  id: n15
+  name: early_ctis
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '118'
+  id: n16
+  name: early_pangaea
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '109'
+    - '110'
+    - '112'
+    - '167'
+  id: n17
+  name: early_agartha
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '133'
+    - '134'
+  id: n18
+  name: early_tirnanog
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '136'
+    - '137'
+  id: n19
+  name: early_fomoria
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '114'
+    - '115'
+  id: n20
+  name: early_vanheim
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '59'
+    - '113'
+  id: n21
+  name: early_helheim
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '46'
+  id: n22
+  name: early_niefelheim
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '191'
+    - '189'
+    - '190'
+  id: n24
+  name: early_bogarus
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '98'
+    - '99'
+  id: n25
+  name: early_kailasa
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '131'
+    - '132'
+  id: n26
+  name: early_lanka
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '95'
+  id: n27
+  name: early_yomi
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '147'
+    - '146'
+  id: n28
+  name: early_gath
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '149'
+    - '150'
+    - '151'
+  id: n29
+  name: early_ur
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '152'
+  id: n30
+  name: early_berytos
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '174'
+    - '175'
+  id: n31
+  name: early_xibalba
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '194'
+    - '195'
+  id: n32
+  name: early_mekone
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '214'
+    - '215'
+  id: n33
+  name: early_ubar
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '128'
+    - '129'
+  id: n36
+  name: early_atlantis
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '116'
+  id: n37
+  name: early_rlyeh
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '72'
+  id: n38
+  name: early_pelagia
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '101'
+  id: n39
+  name: early_oceania
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ea
+    sites:
+    - '182'
+  id: n40
+  name: early_therodos
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '10'
+  id: n43
+  name: mid_arcoscephale
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites: []
+  id: n44
+  name: mid_ermor
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '55'
+    - '64'
+    - '148'
+  id: n45
+  name: mid_sceleria
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '3'
+    - '4'
+  id: n46
+  name: mid_pythium
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '5'
+    - '6'
+  id: n47
+  name: mid_man
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '135'
+  id: n48
+  name: mid_eriu
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '7'
+    - '8'
+  id: n49
+  name: mid_ulm
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '13'
+    - '192'
+  id: n50
+  name: mid_marignon
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '89'
+    - '90'
+    - '88'
+    - '87'
+  id: n51
+  name: mid_mictlan
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '51'
+    - '50'
+  id: n52
+  name: mid_tienchi
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '60'
+    - '61'
+  id: n53
+  name: mid_machaka
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '110'
+    - '111'
+    - '166'
+  id: n54
+  name: mid_agartha
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '1'
+    - '121'
+  id: n55
+  name: mid_abysia
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '11'
+    - '18'
+  id: n56
+  name: mid_caelum
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '62'
+    - '12'
+  id: n57
+  name: mid_ctis
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '14'
+    - '19'
+  id: n58
+  name: mid_pangaea
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites: []
+  id: n59
+  name: mid_asphodel
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '35'
+    - '15'
+  id: n60
+  name: mid_vanheim
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '16'
+    - '212'
+  id: n61
+  name: mid_jotunheim
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '155'
+    - '156'
+  id: n62
+  name: mid_rus
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '78'
+  id: n63
+  name: mid_bandarlog
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '106'
+  id: n64
+  name: mid_bakemono
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '144'
+    - '145'
+  id: n65
+  name: mid_gath
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '186'
+    - '187'
+    - '188'
+  id: n66
+  name: mid_ur
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '172'
+    - '173'
+  id: n67
+  name: mid_nazca
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '177'
+    - '178'
+    - '179'
+  id: n68
+  name: mid_xibalba
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '196'
+    - '197'
+  id: n69
+  name: mid_phlegra
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '198'
+    - '199'
+    - '200'
+  id: n70
+  name: mid_phaeacia
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '205'
+    - '206'
+    - '207'
+    - '208'
+  id: n71
+  name: mid_ind
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '209'
+    - '210'
+    - '211'
+  id: n72
+  name: mid_naba
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '2'
+  id: n73
+  name: mid_atlantis
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '17'
+    - '45'
+  id: n74
+  name: mid_rlyeh
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '160'
+  id: n75
+  name: mid_pelagia
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '162'
+  id: n76
+  name: mid_oceania
+  tags: !!set {}
+- !Pick
+  attr:
+    era: ma
+    sites:
+    - '185'
+  id: n77
+  name: mid_ys
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '122'
+    - '123'
+    - '124'
+  id: n80
+  name: late_arcoscephale
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '138'
+    - '139'
+    - '43'
+  id: n81
+  name: late_pythium
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites: []
+  id: n82
+  name: late_lemur
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '127'
+  id: n83
+  name: late_chelms
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '29'
+    - '42'
+    - '44'
+  id: n84
+  name: late_ulm
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '70'
+    - '71'
+  id: n85
+  name: late_marignon
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '102'
+    - '104'
+    - '105'
+    - '103'
+  id: n86
+  name: late_mictlan
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '52'
+    - '130'
+  id: n87
+  name: late_tienchi
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '92'
+    - '93'
+  id: n89
+  name: late_jomon
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '107'
+    - '108'
+  id: n90
+  name: late_agartha
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '38'
+    - '76'
+    - '39'
+  id: n91
+  name: late_abysia
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '40'
+    - '41'
+  id: n92
+  name: late_caelum
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '63'
+    - '12'
+  id: n93
+  name: late_ctis
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '49'
+  id: n94
+  name: late_pangaea
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '58'
+  id: n95
+  name: late_midgard
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '47'
+  id: n96
+  name: late_utgard
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '140'
+    - '141'
+  id: n97
+  name: late_rus
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '96'
+    - '97'
+  id: n98
+  name: late_patala
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '142'
+    - '143'
+  id: n99
+  name: late_gath
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '170'
+    - '171'
+  id: n100
+  name: late_ragha
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '180'
+    - '181'
+  id: n101
+  name: late_xibalba
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '203'
+    - '204'
+  id: n102
+  name: late_phlegra
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '213'
+  id: n103
+  name: late_vaetti
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '126'
+  id: n106
+  name: late_atlantis
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '164'
+    - '45'
+  id: n107
+  name: late_rlyeh
+  tags: !!set {}
+- !Pick
+  attr:
+    era: la
+    sites:
+    - '161'
+    - '193'
+  id: n108
+  name: late_erytheia
+  tags: !!set {}
+--- !Pool
+merge: []
+name: ea_nations
+picks: []
+remove: []
+--- !Pool
+merge: []
+name: ma_nations
+picks: []
+remove: []
+--- !Pool
+merge: []
+name: la_nations
+picks: []
+remove: []
+--- !Pool
+merge:
+- ea_nations
+- ma_nations
+- la_nations
+name: all_nations
+picks: []
+remove: []

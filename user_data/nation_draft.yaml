@@ -1,0 +1,7 @@
+---
+!BoosterBox
+name: all_nations
+pools:
+  - all_troops: 4
+  - all_commanders: 3
+  - all_mages: 2
