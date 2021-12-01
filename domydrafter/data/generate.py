@@ -1,13 +1,15 @@
 """
 This script coordinates the generating functions to generate and dump game data.
 """
-import unit
-import nation
-import site
+from .unit import generate_units
+from .nation import generate_nations
+from .site import generate_sites
+from .nation_sites import nation_sites
 
 from typing import Dict, Any
 
-if __name__ == "__main__":
-    units: Dict[str, ] = unit.generate_units()
-    sites = site.generate_sites()
-    nations = nation.generate_nations()
+def generate():
+    units = generate_units()
+    nations = generate_nations()
+    sites = generate_sites()
+    nations, sites = nation_sites(nations, sites)

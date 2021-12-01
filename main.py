@@ -5,6 +5,10 @@ import yaml
 from yaml import Loader
 
 import domydrafter.pick
+import domydrafter.data.unit
+import domydrafter.data.nation
+import domydrafter.data.site
+from domydrafter.data.generate import generate
 from domydrafter.pick import Pick, Pool, BoosterBox
 
 def init():
@@ -22,13 +26,14 @@ def init():
 
 
 if __name__ == "__main__":
-    init()
-    if len(sys.argv) != 1:
-        box = sys.argv[1]
-        num_boosters = int(sys.argv[2])
-    for i in range(num_boosters):
-        booster = domydrafter.pick.BoosterBox.boxes[box].new_booster()
-        print('BOOSTER #' + str(i+1))
-        for pick in booster:
-            print('{}, {}'.format(pick.id, pick.name))
-        print()
+    generate()
+    #init()
+    #if len(sys.argv) != 1:
+    #    box = sys.argv[1]
+    #    num_boosters = int(sys.argv[2])
+    #for i in range(num_boosters):
+    #    booster = domydrafter.pick.BoosterBox.boxes[box].new_booster()
+    #    print('BOOSTER #' + str(i+1))
+    #    for pick in booster:
+    #        print('{}, {}'.format(pick.id, pick.name))
+    #    print()

@@ -1,87 +1,103 @@
 from .config import data_dir
-from .utils import read_csv, magic_paths, magic_path_keys
+from .utils import read_csv, magic_paths, magic_path_keys, Pick
 
-from dataclasses import dataclass, field
-from typing import Dict, Any, List, Tuple
+from typing import Dict, List
+from functools import reduce
 
 units_csv_file = 'BaseU.csv'
 
-@dataclass
-class Unit:
-    id: str
-    name: str
-    attr: Dict[str, Any] = field(default_factory=dict)
-    tags: List[str] = field(default_factory=list)
-
+Unit = Pick
 
 def generate_units() -> List[Unit]:
-    units: List[Unit]
-    units = []
-
-    units_csv: List[Dict]
-    units_csv = read_csv(data_dir + units_csv_file)
-
-    for unit_csv in units_csv:
-        id = unit_csv['id']
-        name = unit_csv['name']
-        attr = generate_attr(unit_csv)
-
-    return units
+    units_data = read_csv(data_dir + units_csv_file)
+    return list(map(unit_pipeline, units_data))
 
 
-def generate_attr(unit_csv: Dict) -> Dict[str, Any]:
-    attr = dict()
-    attr = get_paths(attr, unit_csv)
+def unit_pipeline(unit_data: Dict) -> Unit:
+    pipeline = [
+        u_id,
+        u_name,
+        u_paths,
+        u_sacred,
+        u_mage,
+        u_priest
+    ]
+    return reduce(lambda u,f: f(u, unit_data), pipeline, Unit('', '', {}, []))
 
-    return attr
+
+def u_id(unit: Unit, unit_data: Dict) -> Unit:
+    return unit._replace(id='u' + unit_data['id'])
 
 
-def get_path_data(unit_csv: Dict) -> Dict:
+def u_name(unit: Unit, unit_data: Dict) -> Unit:
+    return unit._replace(name=unit_data['name'])
+
+
+def u_paths(unit: Unit, unit_data: Dict) -> Unit:
+    paths = get_paths(unit_data)
+    if len(paths) != 0:
+        unit.attr['paths'] = paths
+    return unit
+
+
+def u_sacred(unit: Unit, unit_data: Dict) -> Unit:
+    if unit_data['holy'] and 'sacred' not in unit.tags:
+        unit.tags.append('sacred')
+    return unit
+
+
+def u_mage(unit: Unit, unit_data: Dict) -> Unit:
+    if 'paths' in unit.attr:
+        if len(unit.attr['paths']) == 1 and 'H' in unit.attr['paths']:
+            pass
+        else:
+            if 'mage' not in unit.tags:
+                unit.tags.append('mage')
+    return unit
+
+
+def u_priest(unit: Unit, unit_data: Dict) -> Unit:
+    if 'paths' in unit.attr and 'H' in unit.attr['paths'] and 'priest' not in unit.tags:
+        unit.tags.append('priest')
+    return unit
+
+
+def get_paths(unit_data: Dict) -> Dict:
+    paths_data = get_paths_data(unit_data)
+    paths = process_paths_data(paths_data)
+    return paths
+
+
+def get_paths_data(unit_data: Dict) -> Dict:
     path_data = dict()
     for key in magic_path_keys:
-        if (unit_csv[key]):
-            path_data[key] = unit_csv[key]
+        if key in unit_data and unit_data[key]:
+            path_data[key] = unit_data[key]
     return path_data
+
+
+def process_paths_data(unit_paths: Dict) -> Dict:
+    paths = dict()
+    for key in unit_paths:
+        if key.startswith('rand'):
+            n = key[-1]
+            rand = unit_paths[key]
+            nbr = unit_paths['nbr' + n]
+            mask = unit_paths['mask' + n]
+            rand_paths: List[str]
+            rand_paths = decode_paths_mask(mask)
+            if 'random' not in paths:
+                paths['random'] = []
+            paths['random'].append((rand, rand_paths, nbr))
+        elif key in magic_paths:
+            paths[key] = unit_paths[key]
+    return paths
 
 
 def decode_paths_mask(mask: int) -> List[str]:
     decoded_paths = []
-    bits = "{:016b}".format(mask)
+    bits = "{:016b}".format(int(mask))
     for i, path in enumerate(reversed(magic_paths)):
         if bits[i] == '1':
             decoded_paths.append(path)
     return list(reversed(decoded_paths))
-
-
-def process_paths_data(unit_csv: Dict) -> Dict:
-    processed_paths = dict()
-    for key in unit_csv:
-        key: str
-        if key.startswith('rand'):
-            n = key[-1]
-            rand = unit_csv[key]
-            nbr = unit_csv['nbr' + n]
-            mask = unit_csv['mask' + n]
-            rand_paths: List[str]
-            rand_paths = decode_paths_mask(mask)
-            if 'random' not in processed_paths:
-                processed_paths['random'] = []
-            processed_paths['random'].append((rand, rand_paths, nbr))
-        elif key in magic_paths:
-            processed_paths[key] = unit_csv[key]
-    return processed_paths
-
-
-def get_paths(attr_dict: Dict, unit_csv: Dict) -> Dict:
-    paths = process_paths_data(unit_csv)
-    if len(paths) > 0:
-        attr_dict['paths'] = paths
-    return attr_dict
-
-
-def generate_tags(unit_csv: Dict) -> List[str]:
-    tags: List[str]
-    tags = []
-
-
-# Utility functions
