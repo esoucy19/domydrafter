@@ -18,6 +18,15 @@ contain multiple documents, each starting with three dashes '---'.
 For your convenience we recommend putting all of your objects in
 separate documents (they can be in the same file though don't worry).
 
+Prepopulated data exists in the application's _data_ directory.
+You should place your own yaml files in the _user_data_ directory.
+
+Do note that the yaml files are read in alphabetical order, and
+referring to an entity before it has been created can lead to
+unexpected behavior, so try to specify your picks, pools and booster
+boxes in order. An easy way to control the order in which files
+are read is to prefix their name with a number.
+
 ### Pick
 
 A "pick" is something you can pick out of a booster pack. Think of it like
