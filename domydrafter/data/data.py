@@ -3,7 +3,8 @@ import yaml
 
 from pick import Pick, Pool, BoosterBox
 
-dir_root = './'
+dir_root = '../'
+datadir = dir_root + 'gamedata/'
 
 def read_csv(filename):
     with open(dir_root + filename, newline='') as file:
@@ -58,6 +59,13 @@ def generate_nations():
 
 
 def generate_unit_tags(unit_data, hrec):
+    """
+    Generate unit tags from a dict of the unit's csv data and a dict of all
+    sites with special unit recruits.
+    :param unit_data: The dict of csv data for the unit
+    :param hrec: List of sites containing hmon and hcom rectruits
+    :return: List of tags to apply to the unit.
+    """
     tags = set()
     unit_id = unit_data['id']
     # str

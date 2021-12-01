@@ -33,3 +33,4 @@
 
 *pychache*
 *.pyc
+*.~lock*
