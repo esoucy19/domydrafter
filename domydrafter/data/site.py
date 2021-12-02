@@ -34,13 +34,18 @@ def s_name(site: Site, site_data: Dict) -> Site:
 
 
 def s_hrec(site: Site, site_data: Dict) -> Site:
-    hrecs = ['u' + site_data[key] for key in hrec_keys if site_data[key]]
-    if len(hrecs) > 0:
-        site.attr['hrec'] = hrecs
+    hcoms = ['u' + site_data[key] for key in hcom_keys if site_data[key]]
+    hmons = ['u' + site_data[key] for key in hmon_keys if site_data[key]]
+    if len(hcoms) > 0:
+        site.attr['hcom'] = hcoms
+    if len(hmons) > 0:
+        site.attr['hmon'] = hmons
     return site
 
 
-hrec_keys = ['hmon' + str(n) for n in range(1,6)] + ['hcom' + str(n) for n in range(1,6)]
+hcom_keys = ['hcom' + str(n) for n in range(1,6)]
+
+hmon_keys = ['hmon' + str(n) for n in range(1,6)]
 
 
 def s_income(site: Site, site_data: Dict) -> Site:
